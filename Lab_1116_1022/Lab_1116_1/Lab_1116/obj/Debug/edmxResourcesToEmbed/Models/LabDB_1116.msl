@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LabDB_1116ModelStoreContainer" CdmEntityContainer="LabDB_1116Entities">
+    <EntitySetMapping Name="FindPets">
+      <EntityTypeMapping TypeName="LabDB_1116Model.FindPet">
+        <MappingFragment StoreEntitySet="FindPet">
+          <ScalarProperty Name="PetPhoto" ColumnName="PetPhoto" />
+          <ScalarProperty Name="LostPlace" ColumnName="LostPlace" />
+          <ScalarProperty Name="LostDate" ColumnName="LostDate" />
+          <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+          <ScalarProperty Name="PetID" ColumnName="PetID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

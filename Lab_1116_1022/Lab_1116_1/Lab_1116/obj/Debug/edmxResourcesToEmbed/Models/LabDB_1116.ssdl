@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LabDB_1116Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="FindPet">
+    <Key>
+      <PropertyRef Name="PetID" />
+    </Key>
+    <Property Name="PetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatorId" Type="int" />
+    <Property Name="LostDate" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LostPlace" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PetPhoto" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="LabDB_1116ModelStoreContainer">
+    <EntitySet Name="FindPet" EntityType="Self.FindPet" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
