@@ -1,0 +1,35 @@
+
+
+#findAnimalList img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px 0;
+}
+
+
+
+
+/* Thirds */
+div.thirds {
+	padding-bottom: 50px;
+}
+
+div.one-third {
+	/*width: 30%;*/
+    width: 22%;
+	float: left;
+	/*margin-right: 5%;*/
+    margin-right: 4%;
+}
+
+div.one-third-last {
+	margin: 0;
+}
+
+/* Main Column */
+
+
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
