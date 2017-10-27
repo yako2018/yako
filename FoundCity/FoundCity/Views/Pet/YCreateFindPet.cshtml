@@ -17,8 +17,9 @@
 
 
 <div class="container">
-    <div><button type="button" id="addFindPetButton" class="btn btn-default">新增</button></div>
     <br />
+    <div><button type="button" id="addFindPetButton" class="btn btn-default">新增</button></div>
+    
     <div class="row" id="findPetList">
 
         @*<div class="col-sm-3">
@@ -310,7 +311,8 @@
 <script>
         $("#lostDateTextBox").datepicker({ dateFormat: "yy-mm-dd" });
                 $(function () {
-                    //comMemberBtn("新", '#');
+                    //comMemberBtn("新", '');
+                    //comMemberBtn("新增");
                     loadAndRefreshUI();
                     //$("#debug").text("OK");
                     $("#accordion").accordion({ header: "h4" });
@@ -335,6 +337,13 @@
                 //    $li.append('<a href='+btn_url+'>'+btn+'</a>');
                 //    $li.appendTo("#memberTab_ul");
                 //}
+                //function comMemberBtn(btn) {
+                //    var $li = $("<li></li>");
+                //    $li.addClass("pull-right");                    
+                //    $li.append('<a>' + btn + '</a>');
+                //    $li.appendTo("#memberTab_ul");
+                //}
+
 
 
                 //預覽
