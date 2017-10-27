@@ -157,12 +157,12 @@
 
 
                             $(".deleteItem").on("click", function (e) {
-                                var iIndex = ($(this).parent().parent().index()-1) / 2;
+                                var iIndex = ($(this).parent().parent().index() - 1) / 2;
 
-                                //var iIndex = ($(this).closest("p").index() - 1) / 2;
+                                //var iIndex = ($(this).closest("div").index() - 1) / 2;
 
                                 tempIndex = iIndex;
-                                alert(iIndex);
+                                //alert(iIndex);
 
                                 var sRows = "<span class='modal_img'><img src='../images/" + debug[iIndex].PetPhoto + "' id='petPhoto' class='img-thumbnail petPhoto' alt='Cinque Terre' width='150' height='240'></span>"
 
@@ -175,8 +175,8 @@
                             })
 
                             $(".editItem").on("click", function (e) {
+
                                 var iIndex = ($(this).parent().parent().index() - 1) / 2;
-                                //alert("editItem_click");
                                 //var iIndex = ($(this).closest("div").index() - 1) / 2;
 
                                 currentIndex = debug[iIndex].PetId;
