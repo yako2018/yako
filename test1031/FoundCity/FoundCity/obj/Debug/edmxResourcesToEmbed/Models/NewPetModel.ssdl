@@ -44,6 +44,30 @@
     <Property Name="ContactSex" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="ContactTel" Type="varchar" MaxLength="10" Nullable="false" />
   </EntityType>
+  <EntityType Name="FindPet2">
+    <Key>
+      <PropertyRef Name="PetId" />
+    </Key>
+    <Property Name="PetId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreatorId" Type="int" Nullable="false" />
+    <Property Name="PetPhoto" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Species" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Size" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Age" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="HairColor" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Characteristic" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreateDate" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LostDate" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LostPlace1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LostPlace2" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="LostPlace3" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PlaceId" Type="int" />
+    <Property Name="State" Type="int" Nullable="false" />
+    <Property Name="ContactMan" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="ContactSex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="ContactTel" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
   <EntityType Name="Members">
     <Key>
       <PropertyRef Name="Id" />
@@ -82,6 +106,7 @@
   <EntityContainer Name="NewPetModelStoreContainer">
     <EntitySet Name="FindMom" EntityType="Self.FindMom" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FindPet" EntityType="Self.FindPet" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FindPet2" EntityType="Self.FindPet2" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Street" EntityType="Self.Street" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
