@@ -1,9 +1,7 @@
-create database YPet
+use FindPet
 go
 
-use YPet
-go
-
+DROP TABLE FindPet
 
 create table FindPet
 (
@@ -18,25 +16,25 @@ create table FindPet
   Characteristic nvarchar(50),
   CreateDate varchar(10) not null,  
   LostDate varchar(10) not null,
-  LostPlace nvarchar(50) not null,
+  LostPlace1 nvarchar(20) not null,
+  LostPlace2 nvarchar(20) not null,
+  LostPlace3 nvarchar(20),
   PlaceId int,
   State int check(State=0 or State=1) not null,
   ContactMan nvarchar(20) not null,
   ContactSex nvarchar(10) check(ContactSex='男' or ContactSex='女') not null,
   ContactTel varchar(10) not null,
   
-
 )
 go
 
-insert into FindPet values ( 1,'p1.jpg', '狗', '大型', '成年' , '黑色', '公', null, '2017-11-10','2017-11-10','台北市內湖區舊宗路',1 ,1 ,'黃先生', '男', '02-1234567')
-insert into FindPet values ( 2,'p2.jpg', '狗', '中型', '成年' , '黃色', '公', null, '2017-11-12','2017-11-12','台中市西區公益路',2 ,1 ,'蔡先生', '男', '04-1234567')
-insert into FindPet values ( 3,'p3.jpg', '貓', '中型', '成年' , '白色', '母', null, '2017-11-14','2017-11-14','高雄市苓雅區自強三路',3 ,1 ,'柯小姐', '女', '07-1234567')
+insert into FindPet values ( 1,'p1.jpg', '狗', '大型', '成年' , '黑色', '公', null, '2017-11-10','2017-11-10','台北市','內湖區','舊宗路',1 ,1 ,'黃先生', '男', '02-1234567')
+insert into FindPet values ( 2,'p2.jpg', '狗', '中型', '成年' , '黃色', '公', null, '2017-11-12','2017-11-12','台中市','西區','公益路',2 ,1 ,'蔡先生', '男', '04-1234567')
+insert into FindPet values ( 3,'p3.jpg', '貓', '中型', '成年' , '白色', '母', null, '2017-11-14','2017-11-14','高雄市','苓雅區','自強三路',3 ,1 ,'柯小姐', '女', '07-1234567')
 go
 
 select * from FindPet
 go
-
 
 
 http://www.twgreatdaily.com/imgs/image/57/5752636.jpg

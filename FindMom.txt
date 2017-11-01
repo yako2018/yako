@@ -1,10 +1,7 @@
-create database YPet
+use NewPet
 go
 
-use YPet
-go
-
-
+DROP TABLE FindMom 
 
 create table FindMom 
 (
@@ -19,7 +16,9 @@ create table FindMom
   Characteristic nvarchar(50),
   CreateDate varchar(10) not null,  
   FindDate varchar(10) not null,
-  FindPlace nvarchar(50) not null,
+  FindPlace1 nvarchar(20) not null,
+  FindPlace2 nvarchar(20) not null,
+  FindPlace3 nvarchar(20),
   PlaceId int,
   State int check(State=0 or State=1) not null,
   ContactMan nvarchar(20) not null,
@@ -30,9 +29,9 @@ create table FindMom
 )
 go
 
-insert into FindMom values ( 1,'p1.jpg', '狗', '大型', '成年' , '黑色', '公', null, '2017-11-11','2017-11-11','台北市內湖區行善路',1 ,1 ,'黃先生', '男', '02-7654321')
-insert into FindMom values ( 2,'p2.jpg', '狗', '中型', '成年' , '黃色', '公', null, '2017-11-13','2017-11-13','台中市西區大墩路',2 ,1 ,'蔡先生', '男', '04-7654321')
-insert into FindMom values ( 3,'p3.jpg', '貓', '中型', '成年' , '白色', '母', null, '2017-11-14','2017-11-14','高雄市苓雅區苓雅二路',3 ,1 ,'柯小姐', '女', '07-7654321')
+insert into FindMom values ( 1,'p1.jpg', '狗', '大型', '成年' , '黑色', '公', null, '2017-11-11','2017-11-11','台北市','內湖區','行善路',1 ,1 ,'黃先生', '男', '02-7654321')
+insert into FindMom values ( 2,'p2.jpg', '狗', '中型', '成年' , '黃色', '公', null, '2017-11-13','2017-11-13','台中市','西區','大墩路',2 ,1 ,'蔡先生', '男', '04-7654321')
+insert into FindMom values ( 3,'p3.jpg', '貓', '中型', '成年' , '白色', '母', null, '2017-11-14','2017-11-14','高雄市','苓雅區','苓雅二路',3 ,1 ,'柯小姐', '女', '07-7654321')
 go
 
 select * from FindMom 
