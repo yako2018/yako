@@ -386,6 +386,10 @@
 /* Yako Style                                                                   */
 /*********************************************************************************/
 
+/*#memberTab .nav-tabs #addFindPetButton {
+    display:none;
+}*/
+
 .file_hidden {
     visibility: hidden;
 }
