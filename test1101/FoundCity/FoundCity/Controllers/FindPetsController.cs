@@ -39,9 +39,6 @@ namespace FoundCity.Controllers
             
         }
 
-
-
-
         //不含區域搜尋
         //http://localhost:51664/api/FindPets?species=貓&size=中型&sex=母&hairColor=白色&age=成年
         public List<FindPet> GetFindPets(string species, string size, string sex, string age, string hairColor) {
