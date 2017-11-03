@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@*---------------------------------------------------------------------------------------------------------------------------------------------*@
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIPxo-7dK6bdUUEiJ6ERWknbOgcRF8eMs&libraries=places"></script>
+<script type="text/javascript" src="http://code.google.com/apis/gears/gears_init.js"></script>
+<script src="~/js/Radar.js"></script>
+
+<link rel="stylesheet" href="~/css/forRadar.css" />
+
+@*---------------------------------------------------------------------------------------------------------------------------------------------*@
+
+<div class="rBody">
+
+    <div id="rSidebar">
+        <h5>
+            <small><b>尋找機構</b></small>
+        </h5>
+        <ul class="sidebar-nav nav">
+            <li onclick="rHospital()"><a>動物醫院</a></li>
+            <li onclick="rStore()"><a>動物商店</a></li>
+            <li onclick="rHostel()"><a>動物旅館</a></li>
+        </ul>
+
+        <div class="title_line"></div>
+
+        <h5>
+            <small><b>站內資訊</b></small>
+        </h5>
+        <ul class="sidebar-nav nav">
+            <li onclick="rFind()"><a>尋寵啟示</a></li>
+            <li onclick="rPick()"><a>拾獲通報</a></li>
+            <li onclick="rClaim()"><a>認養資訊</a></li>
+        </ul>
+
+        <div class="title_line"></div>
+
+        <h5>
+            <small><b>其他功能</b></small>
+        </h5>
+        <ul class="sidebar-nav nav">
+            <li onclick="rEnter()"><a>手動搜尋</a></li>
+        </ul>
+
+    </div>
+
+    <div id="line"></div>
+
+    <div id="rPrompt">
+        <div>左邊！</div>
+        <div>
+            <span>點選您要搜尋的項目</span>
+        </div>
+    </div>
+
+    <div id="rMap_Body">
+
+        <div id="rMap-Canvas"></div>
+
+        <div class="rOaerror rWarning rRadar_font"> 這間店離您有 <strong id="rRange"> 0 </strong> 公尺 </div>
+
+    </div>
+
+    <div id="rResult">
+
+        <div id="rResult_Table">
+            <ul id="rResult_Content" class="nav nav-pills nav-stacked timeline-centered"></ul>
+        </div>
+
+        <div id="rScheduleBar">
+            <p class="rRadar_font"> 搜尋中，請稍後。(  <span id="rRatio"> 0</span>% ) </p>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="clear:both;"></div>
+
+
+</div>
