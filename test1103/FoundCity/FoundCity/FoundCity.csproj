@@ -274,6 +274,8 @@
     <Content Include="Views\Member\SystemManager.cshtml" />
     <Content Include="Views\Member\ChangePassword.cshtml" />
     <Content Include="Views\PetMom\Index.cshtml" />
+    <Content Include="Views\PetMom\MemberFindMom.cshtml" />
+    <Content Include="Views\PetMom\YCreateFindMom.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

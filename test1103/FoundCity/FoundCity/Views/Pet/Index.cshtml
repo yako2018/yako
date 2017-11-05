@@ -177,7 +177,7 @@
         </div>
 
         @*主頁內容(get_FindPet)*@
-        <div class="thirds clearfix" id="findAnimalList">
+        <div class="clearfix" id="findAnimalList">
 
         </div>
         
@@ -400,7 +400,7 @@
                                 if ($("#LoginCheck").val()=="true") {
                                     var iIndex = $(this).parent().parent().parent().parent().index();
                                     //var iIndex = $(this).closest("div").index();
-                                    alert(iIndex);
+                                    //alert(iIndex);
 
                                     var sRowsImg = "<img src='../images/" + debug[iIndex].PetPhoto + "' id='petPhoto' class='img-thumbnail petPhoto' alt='Pet Photo' width='50%' height='40%' style='margin-left:25%;'>"
                                     $("#showImg2").empty();
