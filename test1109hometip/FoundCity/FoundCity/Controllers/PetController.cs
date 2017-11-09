@@ -26,6 +26,7 @@ namespace FoundCity.Controllers
         [Authorize]
         public ActionResult MemberFindPet() {
             //為對照isSameData而建
+            /*驗證頁面資料是否經過驗證*/
             if (ModelState.IsValid) {
                 /*取得會員Id*/
                 ViewData["MemberId"] = memberService.GetMemberId(User.Identity.Name);
@@ -94,5 +95,10 @@ namespace FoundCity.Controllers
             }
 
         }
+
+        
+
+
+
     }
 }

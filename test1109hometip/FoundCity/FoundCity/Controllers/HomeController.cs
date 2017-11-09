@@ -10,7 +10,15 @@ namespace FoundCity.Controllers {
 
         HomeModel homeModel = new HomeModel();
 
+        CMemberService memberService = new CMemberService();
         public ActionResult Index() {
+            //為對照isSameData而建
+            /*驗證頁面資料是否經過驗證*/
+            if (User.Identity.IsAuthenticated)
+            {
+                /*取得會員Id*/
+                ViewData["MemberId"] = memberService.GetMemberId(User.Identity.Name);
+            }
             return View();
         }
 
